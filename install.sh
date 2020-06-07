@@ -273,60 +273,6 @@
     hide_output sudo ufw allow ssh
     hide_output sudo ufw allow http
     hide_output sudo ufw allow https
-    hide_output sudo ufw allow 3333/tcp
-    hide_output sudo ufw allow 3339/tcp
-    hide_output sudo ufw allow 3334/tcp
-    hide_output sudo ufw allow 3433/tcp
-    hide_output sudo ufw allow 3555/tcp
-    hide_output sudo ufw allow 3556/tcp
-    hide_output sudo ufw allow 3573/tcp
-    hide_output sudo ufw allow 3535/tcp
-    hide_output sudo ufw allow 3533/tcp
-    hide_output sudo ufw allow 3553/tcp
-    hide_output sudo ufw allow 3633/tcp
-    hide_output sudo ufw allow 3733/tcp
-    hide_output sudo ufw allow 3636/tcp
-    hide_output sudo ufw allow 3737/tcp
-    hide_output sudo ufw allow 3739/tcp
-    hide_output sudo ufw allow 3747/tcp
-    hide_output sudo ufw allow 3833/tcp
-    hide_output sudo ufw allow 3933/tcp
-    hide_output sudo ufw allow 4033/tcp
-    hide_output sudo ufw allow 4133/tcp
-    hide_output sudo ufw allow 4233/tcp
-    hide_output sudo ufw allow 4234/tcp
-    hide_output sudo ufw allow 4333/tcp
-    hide_output sudo ufw allow 4433/tcp
-    hide_output sudo ufw allow 4533/tcp
-    hide_output sudo ufw allow 4553/tcp
-    hide_output sudo ufw allow 4633/tcp
-    hide_output sudo ufw allow 4733/tcp
-    hide_output sudo ufw allow 4833/tcp
-    hide_output sudo ufw allow 4933/tcp
-    hide_output sudo ufw allow 5033/tcp
-    hide_output sudo ufw allow 5133/tcp
-    hide_output sudo ufw allow 5233/tcp
-    hide_output sudo ufw allow 5333/tcp
-    hide_output sudo ufw allow 5433/tcp
-    hide_output sudo ufw allow 5533/tcp
-    hide_output sudo ufw allow 5733/tcp
-    hide_output sudo ufw allow 5743/tcp
-    hide_output sudo ufw allow 3252/tcp
-    hide_output sudo ufw allow 5755/tcp
-    hide_output sudo ufw allow 5766/tcp
-    hide_output sudo ufw allow 5833/tcp
-    hide_output sudo ufw allow 5933/tcp
-    hide_output sudo ufw allow 6033/tcp
-    hide_output sudo ufw allow 5034/tcp
-    hide_output sudo ufw allow 6133/tcp
-    hide_output sudo ufw allow 6233/tcp
-    hide_output sudo ufw allow 6333/tcp
-    hide_output sudo ufw allow 6433/tcp
-    hide_output sudo ufw allow 7433/tcp
-    hide_output sudo ufw allow 8333/tcp
-    hide_output sudo ufw allow 8463/tcp
-    hide_output sudo ufw allow 8433/tcp
-    hide_output sudo ufw allow 8533/tcp
     hide_output sudo ufw --force enable
     sleep 5
     sudo systemctl status ufw | sed -n "1,3p"   
@@ -369,7 +315,7 @@
     
     # Compil Blocknotify
     cd ~
-    hide_output git clone https://github.com/Kudaraidee/yiimp
+    hide_output https://github.com/Ankh-Trust/yiimp.git
     cd $HOME/yiimp/blocknotify
     sudo sed -i 's/tu8tu5/'$blckntifypass'/' blocknotify.cpp
     hide_output sudo make
